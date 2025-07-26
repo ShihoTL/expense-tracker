@@ -1,0 +1,95 @@
+import { Expense, Category, Budget } from './types';
+import { CATEGORIES } from './constants';
+
+export const mockExpenses: Expense[] = [
+  {
+    id: '1',
+    userId: 'user1',
+    amount: 25.50,
+    category: 'food',
+    description: 'Lunch at downtown cafe',
+    date: new Date('2024-01-15'),
+    paymentMethod: 'credit',
+    tags: ['lunch', 'restaurant'],
+    createdAt: new Date('2024-01-15'),
+    updatedAt: new Date('2024-01-15'),
+  },
+  {
+    id: '2',
+    userId: 'user1',
+    amount: 450.00,
+    category: 'utilities',
+    description: 'Monthly electricity bill',
+    date: new Date('2024-01-14'),
+    paymentMethod: 'bank',
+    tags: ['utilities', 'monthly'],
+    createdAt: new Date('2024-01-14'),
+    updatedAt: new Date('2024-01-14'),
+  },
+  {
+    id: '3',
+    userId: 'user1',
+    amount: 85.99,
+    category: 'shopping',
+    description: 'New running shoes',
+    date: new Date('2024-01-13'),
+    paymentMethod: 'credit',
+    tags: ['clothing', 'sports'],
+    createdAt: new Date('2024-01-13'),
+    updatedAt: new Date('2024-01-13'),
+  },
+  {
+    id: '4',
+    userId: 'user1',
+    amount: 15.00,
+    category: 'transport',
+    description: 'Gas station fill-up',
+    date: new Date('2024-01-12'),
+    paymentMethod: 'debit',
+    tags: ['fuel', 'car'],
+    createdAt: new Date('2024-01-12'),
+    updatedAt: new Date('2024-01-12'),
+  },
+  {
+    id: '5',
+    userId: 'user1',
+    amount: 120.00,
+    category: 'entertainment',
+    description: 'Concert tickets',
+    date: new Date('2024-01-11'),
+    paymentMethod: 'credit',
+    tags: ['music', 'entertainment'],
+    createdAt: new Date('2024-01-11'),
+    updatedAt: new Date('2024-01-11'),
+  },
+];
+
+export const mockCategories: Category[] = CATEGORIES.map(cat => ({
+  id: cat.id,
+  userId: 'user1',
+  name: cat.name,
+  icon: cat.icon,
+  color: cat.color,
+  isDefault: true,
+}));
+
+export const mockBudgets: Budget[] = [
+  {
+    id: '1',
+    userId: 'user1',
+    categoryId: 'food',
+    amount: 500,
+    period: 'monthly',
+    startDate: new Date('2024-01-01'),
+    endDate: new Date('2024-01-31'),
+  },
+  {
+    id: '2',
+    userId: 'user1',
+    categoryId: 'transport',
+    amount: 200,
+    period: 'monthly',
+    startDate: new Date('2024-01-01'),
+    endDate: new Date('2024-01-31'),
+  },
+];
